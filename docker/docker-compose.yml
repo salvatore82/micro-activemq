@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+    
+  activemq:
+    image: rmohr/activemq:5.15.6
+    ports:
+      - 61616:61616
+      - 8161:8161
+    networks:
+        - microusernetwork
+        
+networks:
+  microusernetwork:
+    driver: bridge
